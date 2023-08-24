@@ -1,2 +1,2 @@
-# archlinux.user
+# dotfiles
 Config files for my user.
