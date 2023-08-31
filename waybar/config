@@ -1,5 +1,5 @@
 {
-    // "layer": "top", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "output": "eDP-1",
     "height": 20, // Waybar height (to be removed for auto height)
