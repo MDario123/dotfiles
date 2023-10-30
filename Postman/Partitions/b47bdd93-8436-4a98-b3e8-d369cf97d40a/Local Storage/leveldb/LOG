@@ -1,0 +1,18 @@
+2023/10/24-13:04:49.822 4005 Reusing MANIFEST /home/mdario/.config/Postman/Partitions/b47bdd93-8436-4a98-b3e8-d369cf97d40a/Local Storage/leveldb/MANIFEST-000001
+2023/10/24-13:04:49.823 4005 Recovering log #132
+2023/10/24-13:04:49.823 4005 Reusing old log /home/mdario/.config/Postman/Partitions/b47bdd93-8436-4a98-b3e8-d369cf97d40a/Local Storage/leveldb/000132.log 
+2023/10/24-19:40:51.283 16d74 Level-0 table #136: started
+2023/10/24-19:40:51.288 16d74 Level-0 table #136: 14469 bytes OK
+2023/10/24-19:40:51.292 16d74 Delete type=0 #132
+2023/10/24-19:52:05.338 1721c Level-0 table #138: started
+2023/10/24-19:52:05.350 1721c Level-0 table #138: 16940 bytes OK
+2023/10/24-19:52:05.354 1721c Delete type=0 #135
+2023/10/24-19:52:05.354 1721c Compacting 4@0 + 1@1 files
+2023/10/24-19:52:05.360 1721c Generated table #139@0: 19 keys, 11298 bytes
+2023/10/24-19:52:05.360 1721c Compacted 4@0 + 1@1 files => 11298 bytes
+2023/10/24-19:52:05.364 1721c compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/10/24-19:52:05.364 1721c Delete type=2 #138
+2023/10/24-19:52:05.364 1721c Delete type=2 #136
+2023/10/24-19:52:05.364 1721c Delete type=2 #128
+2023/10/24-19:52:05.364 1721c Delete type=2 #133
+2023/10/24-19:52:05.364 1721c Delete type=2 #130

@@ -1,0 +1,8 @@
+2023/09/26-16:35:48.682 45be Reusing MANIFEST /home/mdario/.config/Postman/Partitions/b47bdd93-8436-4a98-b3e8-d369cf97d40a/Local Storage/leveldb/MANIFEST-000001
+2023/09/26-16:35:48.682 45be Recovering log #126
+2023/09/26-16:35:48.683 45be Level-0 table #130: started
+2023/09/26-16:35:48.687 45be Level-0 table #130: 37440 bytes OK
+2023/09/26-16:35:48.691 45be Delete type=0 #126
+2023/09/26-16:36:48.864 460f Level-0 table #133: started
+2023/09/26-16:36:48.876 460f Level-0 table #133: 40055 bytes OK
+2023/09/26-16:36:48.880 460f Delete type=0 #131

@@ -1,0 +1,10 @@
+2023/10/24-13:04:51.202 4004 Reusing MANIFEST /home/mdario/.config/Postman/Partitions/b47bdd93-8436-4a98-b3e8-d369cf97d40a/IndexedDB/https_desktop.postman.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/10/24-13:04:51.202 4004 Recovering log #18
+2023/10/24-13:04:51.215 4004 Reusing old log /home/mdario/.config/Postman/Partitions/b47bdd93-8436-4a98-b3e8-d369cf97d40a/IndexedDB/https_desktop.postman.com_0.indexeddb.leveldb/000018.log 
+2023/10/24-16:03:11.451 9eec Level-0 table #23: started
+2023/10/24-16:03:11.467 9eec Level-0 table #23: 1453815 bytes OK
+2023/10/24-16:03:11.470 9eec Delete type=0 #18
+2023/10/24-16:09:42.565 9eec Compacting 1@1 + 1@2 files
+2023/10/24-16:09:42.574 9eec Generated table #24@1: 1034 keys, 85641 bytes
+2023/10/24-16:09:42.574 9eec Compacted 1@1 + 1@2 files => 85641 bytes
+2023/10/24-16:09:42.579 9eec compacted to: files[ 0 0 1 0 0 0 0 ]

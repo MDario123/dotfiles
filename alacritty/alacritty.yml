@@ -1,0 +1,6 @@
+import:
+  - ~/.config/alacritty/themes/catppuccin.yaml
+font:
+  normal:
+    family: "FantasqueSansM Nerd Font Mono"
+  size: 16.0

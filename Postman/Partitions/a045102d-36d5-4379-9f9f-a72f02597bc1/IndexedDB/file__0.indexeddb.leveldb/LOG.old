@@ -1,0 +1,10 @@
+2023/09/06-18:13:13.290 2434 Creating DB /home/mdario/.config/Postman/Partitions/a045102d-36d5-4379-9f9f-a72f02597bc1/IndexedDB/file__0.indexeddb.leveldb since it was missing.
+2023/09/06-18:13:13.298 2434 Reusing MANIFEST /home/mdario/.config/Postman/Partitions/a045102d-36d5-4379-9f9f-a72f02597bc1/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2023/09/06-18:13:13.308 248d Level-0 table #5: started
+2023/09/06-18:13:13.311 248d Level-0 table #5: 492 bytes OK
+2023/09/06-18:13:13.315 248d Delete type=0 #3
+2023/09/06-18:13:13.315 248d Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/09/06-18:13:13.762 248d Level-0 table #7: started
+2023/09/06-18:13:13.765 248d Level-0 table #7: 477 bytes OK
+2023/09/06-18:13:13.768 248d Delete type=0 #4
+2023/09/06-18:13:13.768 248d Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
