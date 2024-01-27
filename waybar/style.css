@@ -29,6 +29,11 @@ window#waybar.hidden {
   font-size: 16px;
 }
 
+window#waybar.empty #window {
+  color: transparent;
+  background-color: transparent;
+}
+
 window#waybar.termite #window,
 window#waybar.Firefox #window,
 window#waybar.Navigator #window,
