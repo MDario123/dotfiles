@@ -2,14 +2,30 @@
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "output": "eDP-1",
-    "height": 10, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-right": ["pulseaudio", "network", "temperature", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock", "tray"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-right": ["tray", "pulseaudio", "network", "temperature", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock"],
+
+    "hyprland/workspaces": {
+        "format": "{name}: {windows}",
+        "format-window-separator": "  ",
+        "window-rewrite": {
+            "class<firefox>": "\uf269",
+            "class<kitty>": "\uf489",
+            "class<org.telegram.desktop>": "\uf2c6",
+        }
+    },
+
+    "hyprland/window": {
+      "format": "{title}"
+    },
+
     "tray": {
         "icon-size": 20,
-        "spacing": 5
+        "spacing": 10
     },
     "clock": {
         // "timezone": "America/New_York",
@@ -17,7 +33,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "states": {
+            "working": 5
+        },
+        "format": "",
+        "format-working": "{usage}% ",
         "tooltip": false
     },
     "memory": {
@@ -38,20 +58,17 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
+        "format": "",
+        "format-warning": "{capacity}% {icon}",
+        "format-critical": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface

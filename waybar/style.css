@@ -1,28 +1,32 @@
 @import "mocha.css";
 * {
-	border: none;
-	border-radius: 0;
-	font-family: Nerd Font Hack;
-	font-size: 14px;
-	min-height: 24px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: Nerd Font Hack;
+  font-size: 14px;
+  min-height: 24px;
 }
 
 window#waybar {
-	background: transparent;
+  background: transparent;
 }
 
 window#waybar.hidden {
-	opacity: 0.2;
+  opacity: 0.2;
 }
 
 #window {
-    margin-top: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-	  border-radius: 26px;
-	transition: none;
-  color: transparent;
-	background: transparent;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: none;
+  background: #282a36;
+  font-family: Nerd Font Hack;
+  font-size: 16px;
 }
 
 window#waybar.termite #window,
@@ -30,150 +34,104 @@ window#waybar.Firefox #window,
 window#waybar.Navigator #window,
 window#waybar.PCSX2 #window {
   color: #4d4d4d;
-	background: #e6e6e6;
+  background: #e6e6e6;
 }
 
 #workspaces {
-	margin-top: 8px;
-	margin-left: 12px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	background: #282a36;
-	transition: none;
+  margin-left: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #282a36;
+  transition: none;
 }
 
 #workspaces button {
-	transition: none;
-	color: #f8f8f2;
-	background: transparent;
-	font-size: 16px;
+  transition: none;
+  color: #f8f8f2;
+  background: transparent;
+  font-size: 16px;
 }
 
 #workspaces button.focused {
-	color: #9aedfe;
+  color: #9aedfe;
 }
 
 #workspaces button:hover {
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	color: #ff79c6;
-}
-
-#mpd {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	background: #282a36;
-	transition: none;
-	color: #4d4d4d;
-	background: #5af78e;
-}
-
-#mpd.disconnected,
-#mpd.stopped {
-	color: #f8f8f2;
-	background: #282a36;
+  transition: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #ff79c6;
 }
 
 #network {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @text;
-	background: @lavender;
+  margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 12px;
+  transition: none;
+  color: @text;
+  background: @lavender;
 }
 
 #pulseaudio {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @text;
-	background: @sky;
+  margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 12px;
+  transition: none;
+  color: @text;
+  background: @sky;
 }
 
 #temperature {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @text;
-	background: @green;
+  margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 10px;
+  transition: none;
+  color: @text;
+  background: @green;
 }
 
 #cpu {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @text;
-	background: @yellow;
+  margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 12px;
+  transition: none;
+  color: @text;
+  background: @yellow;
 }
 
 #memory {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @text;
-	background: @red;
+  margin-left: 8px;
+  padding-left: 6px;
+  padding-right: 12px;
+  transition: none;
+  color: @text;
+  background: @red;
 }
 
 #clock {
-	margin-top: 8px;
-	margin-left: 8px;
-	margin-right: 12px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @text;
-	background: @sapphire;
+  margin-left: 8px;
+  margin-right: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: none;
+  color: @text;
+  background: @sapphire;
 }
 
 #battery {
-	margin-top: 8px;
-	margin-left: 8px;
-	margin-right: 12px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @text;
-	background: @peach;
+  margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: none;
+  color: @text;
+  background: @peach;
 }
 
 #backlight {
-	margin-top: 8px;
-	margin-left: 8px;
-	margin-right: 12px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 26px;
-	transition: none;
-	color: @text;
-	background: @pink;
+  margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 10px;
+  transition: none;
+  color: @text;
+  background: @pink;
 }
