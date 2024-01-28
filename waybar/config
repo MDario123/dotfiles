@@ -7,7 +7,7 @@
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-right": ["tray", "pulseaudio", "network", "temperature", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock"],
+    "modules-right": ["tray", "pulseaudio", "network", "temperature", "cpu", "memory", "backlight", "battery", "clock"],
 
     "hyprland/workspaces": {
         "format": "{name}: {windows}",
@@ -58,10 +58,12 @@
     },
     "battery": {
         "states": {
+            "relevant": 60,
             "warning": 30,
             "critical": 15
         },
         "format": "",
+        "format-relevant": "{capacity}% {icon}",
         "format-warning": "{capacity}% {icon}",
         "format-critical": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
