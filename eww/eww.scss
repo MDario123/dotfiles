@@ -1,0 +1,20 @@
+*{
+  all:unset;
+}
+
+@import "./colors.scss";
+
+*{
+  color: $red;
+}
+
+.bar{
+  padding: 5px;
+  background: unset;
+}
+
+@import "./bar/right.scss";
+@import "./bar/center.scss";
+
+
+

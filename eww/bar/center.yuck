@@ -1,0 +1,6 @@
+(include "./bar/center/clock.yuck")
+
+(defwidget center []
+  (box
+  (clock)
+))

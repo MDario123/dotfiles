@@ -1,0 +1,21 @@
+(defwidget battery [status charge]
+  (tooltip
+  (box :class "battery_detailed"
+  (circular-progress 
+      :width 50
+      :height 50
+      :value charge 
+      :start-at 75
+      :thickness 5
+      ""
+  ))
+  (box :class "battery"
+  (label :text 
+      {(status == 'Full' ? "" 
+        : (charge <= 20 ? ""
+        : charge <= 40 ? ""
+        : charge <= 60 ? ""
+        : charge <= 80 ? ""
+        : "") ) }
+  ))
+))

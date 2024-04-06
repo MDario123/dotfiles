@@ -1,0 +1,62 @@
+.shutdown_button{
+  background: $background;
+  padding: 6px 11px 6px 7px;
+  border: 2px solid $red;
+  border-radius: 6px;
+}
+.lock_button{
+  margin: 0px 5px 0px 0px;
+  background: $background;
+  border: 2px solid $red;
+  border-radius: 6px;
+}
+.reboot_button, .logout_button{
+  margin: 0px 5px 0px 0px;
+  background: $background;
+  padding: 6px 11px 6px 7px;
+  border: 2px solid $red;
+  border-radius: 6px;
+}
+
+.volume_box{
+  background: $background;
+  padding: 4px 13px 3px 8px;
+  border: 2px solid $red;
+  border-radius: 6px;
+}
+.volume{
+  margin: 0px 0px 0px 10px;
+  background: $background;
+  trough{
+    border: 2px solid $foreground;
+    border-radius: 1000px;
+    min-height: 5px;
+    highlight{
+      background-color: $red;
+      border-radius: 1000px;
+    }
+  }
+}
+
+.battery{
+  background: $background;
+  padding: 4px 13px 3px 8px;
+  border: 2px solid $red;
+  border-radius: 6px;
+}
+.battery_detailed{
+  background: $background;
+  padding: 5px 5px 5px 5px;
+  border: 2px solid $red;
+  border-radius: 6px;
+  circular-progress{
+    background: $foreground;
+    scale trough highlight{
+      border-radius: 1000px;
+      border: 2px solid $foreground;
+    }
+    label{
+      padding: 0px 3px 0px 0px;
+    }
+  }
+}
