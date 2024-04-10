@@ -1,27 +1,27 @@
 .shutdown_button{
   background: $background;
   padding: 6px 11px 6px 7px;
-  border: 2px solid $red;
+  border: 2px solid;
   border-radius: 6px;
 }
 .lock_button{
   margin: 0px 5px 0px 0px;
   background: $background;
-  border: 2px solid $red;
+  border: 2px solid;
   border-radius: 6px;
 }
 .reboot_button, .logout_button{
   margin: 0px 5px 0px 0px;
   background: $background;
   padding: 6px 11px 6px 7px;
-  border: 2px solid $red;
+  border: 2px solid;
   border-radius: 6px;
 }
 
 .volume_box{
   background: $background;
   padding: 4px 13px 3px 8px;
-  border: 2px solid $red;
+  border: 2px solid;
   border-radius: 6px;
 }
 .volume{
@@ -32,7 +32,7 @@
     border-radius: 1000px;
     min-height: 5px;
     highlight{
-      background-color: $red;
+      background-color: $mauve;
       border-radius: 1000px;
     }
   }
@@ -41,13 +41,13 @@
 .battery{
   background: $background;
   padding: 4px 13px 3px 8px;
-  border: 2px solid $red;
+  border: 2px solid;
   border-radius: 6px;
 }
 .battery_detailed{
   background: $background;
   padding: 5px 5px 5px 5px;
-  border: 2px solid $red;
+  border: 2px solid;
   border-radius: 6px;
   circular-progress{
     background: $foreground;
