@@ -1,0 +1,15 @@
+(defpoll hotspot-status :interval "1s" "./scripts/hotspot status")
+
+(defwidget hotspot []
+  (box
+  (button :class "hotspot"
+    :visible {hotspot-status == "1"}
+    :onclick "./scripts/hotspot down"
+    "󰖩"
+  )
+  (button :class "hotspot"
+    :visible {hotspot-status == "0"}
+    :onclick "./scripts/hotspot up"
+    "󰤯"
+  )
+))
