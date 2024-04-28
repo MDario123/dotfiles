@@ -1,5 +1,6 @@
 (include "./bar/right.yuck")
 (include "./bar/center.yuck")
+(include "./bar/left.yuck")
 
 (defwindow bar 
   :monitor 0
@@ -13,6 +14,6 @@
     :anchor "top center"
   )
 (centerbox
-(box)
+(left)
 (center)
 (right)))
