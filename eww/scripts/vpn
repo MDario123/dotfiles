@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+fatal() {
+  echo "FATAL ERROR: $@"
+  exit 1
+}
+trap 'sudo -k' EXIT
+
+case $1 in 
+
+status)
+  STATUS=$(nmcli con show proton-us-udp | rg GENERAL.STATE --include-zero --count)
+
+  echo $STATUS
+ ;;
+
+up)
+  zenity --password | sudo -S nmcli con up proton-us-udp
+  ;;
+
+down)
+  zenity --password | sudo -S nmcli con down proton-us-udp 
+  ;;
+esac
+
+exit 0
