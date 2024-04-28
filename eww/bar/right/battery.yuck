@@ -2,6 +2,11 @@
   (tooltip
   (box :class "battery_detailed"
   (circular-progress 
+        :css {
+          charge <= 20 ? "* {color: #F8A;}"
+        : charge <= 70 ? "* {color: #DD8;}"
+        : "* {color: #AEA;}"
+        }
       :width 50
       :height 50
       :value charge 
