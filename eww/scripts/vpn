@@ -15,11 +15,11 @@ status)
  ;;
 
 up)
-  zenity --password | sudo -S nmcli con up proton-us-udp
+  nmcli con up proton-us-udp
   ;;
 
 down)
-  zenity --password | sudo -S nmcli con down proton-us-udp 
+  nmcli con down proton-us-udp 
   ;;
 esac
 
