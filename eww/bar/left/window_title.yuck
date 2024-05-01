@@ -1,4 +1,4 @@
-(defpoll current_window_title :interval "1s" "hyprctl --instance 0 activewindow | rg 'title:' | awk '{ $1=\"\"; print }'")
+(defpoll current_window_title :interval "1s" "./scripts/current_window")
 
 (defwidget window_title []
   (box :class "window_title"

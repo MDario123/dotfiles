@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+hyprctl --instance 0 activewindow | rg 'title:' | awk '{ $1=""; print }' | sed 's/\(.\{60\}\).*/\1.../'
