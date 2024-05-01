@@ -2,5 +2,5 @@
 
 (defwidget window_title []
   (box :class "window_title"
-  (label :text current_window_title)
+  (label :text current_window_title :limit-width 60)
 ))
