@@ -15,11 +15,11 @@ status)
  ;;
 
 up)
-  zenity --password | sudo -S nmcli con up Hotspot
+  nmcli con up Hotspot
   ;;
 
 down)
-  zenity --password | sudo -S nmcli con down Hotspot
+  nmcli con down Hotspot
   ;;
 esac
 
