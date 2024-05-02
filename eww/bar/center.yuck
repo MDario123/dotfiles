@@ -1,6 +1,9 @@
 (include "./bar/center/clock.yuck")
+(include "./bar/center/pomodoro_timer.yuck")
 
 (defwidget center []
-  (box
+  (centerbox :halign "center" :hexpand true :width 160
+  (box)
   (clock)
+  (pomodoro-timer)
 ))

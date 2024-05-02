@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+
+lf=/tmp/pomodoro-timer
+worktime=1500
+shortresttime=300
+longresttime=900
+
+fatal() {
+  echo "FATAL ERROR: $@"
+  exit 1
+}
+
+# trap "rm -f $lf" EXIT
+
+touch $lf
+
+statuscode=$(cut -d ' ' -f1 $lf)
+lastused=$(cut -d ' ' -f2 $lf)
+currenttime=$(date +%s)
+
+case $1 in 
+
+get)
+  case $statuscode in 
+    0)
+      echo 'not-started 100'
+      ;;
+    1|3|5|7)
+      fraction=$(echo "scale=3; ($currenttime-$lastused)*100/$worktime" | bc)
+      echo "work $fraction"
+      # Auto start rest if time finished
+      if (( $lastused + $worktime < $currenttime )); then
+        let statuscode++
+        echo "$statuscode $currenttime" > $lf
+      fi
+      ;;
+    2|4|6)
+      fraction=$(echo "scale=3; ($currenttime-$lastused)*100/$shortresttime" | bc)
+      echo "short-rest $fraction"
+      ;;
+    8)
+      fraction=$(echo "scale=3; ($currenttime-$lastused)*100/$longresttime" | bc)
+      echo "long-rest $fraction"
+      ;;
+    *)
+      # If the information in the lock file is incoherent (or empty) insert defaults
+      echo '0 0' > $lf
+      # Output as if defaults were found
+      echo 'not-started 100'
+      ;;
+  esac
+ ;;
+
+toggle)
+  case $statuscode in 
+    0)
+      let statuscode++
+      echo "$statuscode $currenttime" > $lf
+      ;;
+    1|3|5|7)
+      if (( $lastused + $worktime < $currenttime )); then
+        let statuscode++
+        echo "$statuscode $currenttime" > $lf
+      fi
+      ;;
+    2|4|6)
+      if (( $lastused + $shortresttime < $currenttime )); then
+        let statuscode++
+        echo "$statuscode $currenttime" > $lf
+      fi
+      ;;
+    8)
+      if (( $lastused + $longresttime < $currenttime )); then
+        let statuscode++
+        echo "$statuscode $currenttime" > $lf
+      fi
+      ;;
+    *)
+      fatal "Use at least one get first"
+      ;;
+  esac
+  ;;
+esac
+
+exit 0
