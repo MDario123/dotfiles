@@ -71,14 +71,17 @@ toggle)
       ;;
     8)
       if (( $lastused + $longresttime < $currenttime )); then
-        let statuscode++
-        echo "$statuscode $currenttime" > $lf
+        echo "0 0" > $lf
       fi
       ;;
     *)
       fatal "Use at least one get first"
       ;;
   esac
+  ;;
+
+restart)
+  echo "0 0" > $lf
   ;;
 esac
 

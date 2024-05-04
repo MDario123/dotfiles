@@ -1,10 +1,13 @@
 (defpoll pomodoro-status :interval "0.5s" "./scripts/pomodoro get")
 
 (defwidget pomodoro-timer []
-  (button :class "pomodoro-timer" :onclick "./scripts/pomodoro toggle"
+  (button 
+    :class "pomodoro-timer" 
+    :onclick "./scripts/pomodoro toggle" 
+    :onrightclick "./scripts/pomodoro restart"
     (circular-progress
         :css {
-          pomodoro-status =~ "^not-started" ? "* {color: #4ED;}"
+          pomodoro-status =~ "^not-started" ? "* {color: #CAF;}"
         : pomodoro-status =~ "^work" ? "* {color: #7E9;}"
         : pomodoro-status =~ "^short-rest" ? "* {color: #4ED;}"
         : pomodoro-status =~ "^long-rest" ? "* {color: #4ED;}"
