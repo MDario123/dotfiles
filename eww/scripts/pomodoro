@@ -10,6 +10,9 @@ fatal() {
   exit 1
 }
 
+notify() {
+  aplay ./resources/sounds/tap.wav &
+}
 # trap "rm -f $lf" EXIT
 
 touch $lf
@@ -54,23 +57,27 @@ get)
 toggle)
   case $statuscode in 
     0)
+      notify
       let statuscode++
       echo "$statuscode $currenttime" > $lf
       ;;
     1|3|5|7)
       if (( $lastused + $worktime < $currenttime )); then
+        notify
         let statuscode++
         echo "$statuscode $currenttime" > $lf
       fi
       ;;
     2|4|6)
       if (( $lastused + $shortresttime < $currenttime )); then
+        notify
         let statuscode++
         echo "$statuscode $currenttime" > $lf
       fi
       ;;
     8)
       if (( $lastused + $longresttime < $currenttime )); then
+        notify
         echo "0 0" > $lf
       fi
       ;;
@@ -81,6 +88,7 @@ toggle)
   ;;
 
 restart)
+  notify
   echo "0 0" > $lf
   ;;
 esac

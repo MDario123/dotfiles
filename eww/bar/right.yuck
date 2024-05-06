@@ -5,6 +5,7 @@
 
 (defwidget right []
   (box :halign "end" :space-evenly false :spacing 5
+    (systray :spacing 5)
     (network)
     (volume)
     (battery :status {EWW_BATTERY.BAT1.status} :charge {EWW_BATTERY.BAT1.capacity})
