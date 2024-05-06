@@ -33,6 +33,7 @@ get)
       echo "work $fraction"
       # Auto start rest if time finished
       if (( $lastused + $worktime < $currenttime )); then
+        notify
         let statuscode++
         echo "$statuscode $currenttime" > $lf
       fi
@@ -40,10 +41,16 @@ get)
     2|4|6)
       fraction=$(echo "scale=3; ($currenttime-$lastused)*100/$shortresttime" | bc)
       echo "short-rest $fraction"
+      if (( $fraction == 100 )); then
+        notify
+      fi
       ;;
     8)
       fraction=$(echo "scale=3; ($currenttime-$lastused)*100/$longresttime" | bc)
       echo "long-rest $fraction"
+      if (( $fraction == 100 )); then
+        notify
+      fi
       ;;
     *)
       # If the information in the lock file is incoherent (or empty) insert defaults
