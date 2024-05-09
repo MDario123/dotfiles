@@ -6,6 +6,11 @@ fatal() {
 }
 trap 'sudo -k' EXIT
 
+notify() {
+  notify-send -t 2000 "$1" &
+  aplay ./resources/sounds/tap.wav &
+}
+
 case $1 in 
 
 status)
@@ -15,10 +20,12 @@ status)
  ;;
 
 up)
+  notify "Starting Hotspot"
   nmcli con up Hotspot
   ;;
 
 down)
+  notify "Stopping Hotspot"
   nmcli con down Hotspot
   ;;
 esac

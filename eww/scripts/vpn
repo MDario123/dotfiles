@@ -6,6 +6,11 @@ fatal() {
 }
 trap 'sudo -k' EXIT
 
+notify() {
+  notify-send -t 2000 "$1" &
+  aplay ./resources/sounds/tap.wav &
+}
+
 case $1 in 
 
 status)
@@ -15,10 +20,12 @@ status)
  ;;
 
 up)
+  notify "Starting VPN connection"
   nmcli con up proton-us-udp
   ;;
 
 down)
+  notify "Stopping VPN connection"
   nmcli con down proton-us-udp 
   ;;
 esac
