@@ -40,9 +40,10 @@
 
 .battery{
   background: $background;
-  padding: 4px 13px 3px 8px;
+  padding: 4px 8px 3px 8px;
   border: 2px solid;
   border-radius: 6px;
+  font-size: 20px;
 }
 .battery_detailed{
   background: $background;
@@ -56,7 +57,8 @@
       border: 2px solid $foreground;
     }
     label{
-      padding: 0px 3px 0px 0px;
+      font-size: 26px;
+      padding: 0px 0px 0px 0px;
     }
   }
 }

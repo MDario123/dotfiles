@@ -12,15 +12,22 @@
       :value charge 
       :start-at 75
       :thickness 5
-      ""
+      (label :text 
+          {(status == 'Charging' ? "󰂄" 
+            : (charge <= 20 ? "󰁻"
+            : charge <= 40 ? "󰁽"
+            : charge <= 60 ? "󰁿"
+            : charge <= 80 ? "󰂁"
+            : "󰁹") ) }
+      )
   ))
   (box :class "battery"
   (label :text 
-      {(status == 'Full' ? "" 
-        : (charge <= 20 ? ""
-        : charge <= 40 ? ""
-        : charge <= 60 ? ""
-        : charge <= 80 ? ""
-        : "") ) }
+      {(status == 'Charging' ? "󰂄" 
+        : (charge <= 20 ? "󰁻"
+        : charge <= 40 ? "󰁽"
+        : charge <= 60 ? "󰁿"
+        : charge <= 80 ? "󰂁"
+        : "󰁹") ) }
   ))
 ))
