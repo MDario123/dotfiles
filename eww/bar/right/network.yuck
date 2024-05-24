@@ -21,12 +21,12 @@
   (button :class "vpn"
     :visible {vpn-status == "1"}
     :onclick "./scripts/vpn down"
-    "󰖂"
+    "󰖂 󰖩"
   )
   (button :class "vpn"
     :visible {vpn-status == "0"}
     :onclick "./scripts/vpn up"
-    "󰖂"
+    "󰖂 󰤯"
   ))
 )
 
