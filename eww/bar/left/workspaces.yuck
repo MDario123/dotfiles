@@ -9,7 +9,6 @@
         (button
           :class "workspace_button"
           :onclick "hyprctl --instance $(echo $HYPRLAND_INSTANCE_SIGNATURE) dispatch workspace ${workspace.id}"
-          ;; ""
           (label :text {workspace.id})
         )
 )))
