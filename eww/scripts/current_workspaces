@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+hyprctl --instance $(echo $HYPRLAND_INSTANCE_SIGNATURE) workspaces -j | jq -c '[.[] | {"id":.id}] | sort'

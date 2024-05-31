@@ -1,0 +1,15 @@
+(defpoll current_workspaces :interval "1s" "./scripts/current_workspaces")
+
+(defwidget workspaces []
+  (box
+      :hexpand true
+      :class "workspaces"
+    (
+      for workspace in current_workspaces
+        (button
+          :class "workspace_button"
+          :onclick "hyprctl --instance $(echo $HYPRLAND_INSTANCE_SIGNATURE) dispatch workspace ${workspace.id}"
+          ;; ""
+          (label :text {workspace.id})
+        )
+)))
