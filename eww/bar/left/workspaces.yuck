@@ -1,4 +1,4 @@
-(defpoll current_workspaces :interval "1s" "./scripts/current_workspaces")
+(defpoll current_workspaces :interval "0.5s" "./scripts/current_workspaces")
 
 (defwidget workspaces []
   (box

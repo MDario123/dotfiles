@@ -1,4 +1,4 @@
-(defpoll current_window_title :interval "1s" "./scripts/current_window")
+(defpoll current_window_title :interval "0.5s" "./scripts/current_window")
 
 (defwidget window_title []
   (box :class "window_title"
