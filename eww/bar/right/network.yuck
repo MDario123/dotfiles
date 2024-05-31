@@ -3,40 +3,24 @@
 (defpoll vpn-status :interval "1s" "./scripts/vpn status")
 
 (defwidget hotspot []
-  (box
   (button :class "hotspot"
-    :visible {hotspot-status == "1"}
-    :onclick "./scripts/hotspot down"
-    "󰖩"
-  )
-  (button :class "hotspot"
-    :visible {hotspot-status == "0"}
-    :onclick "./scripts/hotspot up"
-    "󰤯"
-  ))
-)
+    :onclick {hotspot-status == "1" ? "./scripts/hotspot down" : "./scripts/hotspot up"}
+    {hotspot-status == "1" ? "󰖩" : "󰤯"}
+))
 
 (defwidget vpn []
-  (box
   (button :class "vpn"
-    :visible {vpn-status == "1"}
-    :onclick "./scripts/vpn down"
-    "󰖂 󰖩"
-  )
-  (button :class "vpn"
-    :visible {vpn-status == "0"}
-    :onclick "./scripts/vpn up"
-    "󰖂 󰤯"
-  ))
-)
+    :onclick {vpn-status == "1" ? "./scripts/vpn down" : "./scripts/vpn up"}
+    {vpn-status == "1" ? "󰖩" : "󰤯"}
+))
 
 (defwidget network []
   (eventbox :onhover "eww update network-show=true" :onhoverlost "eww update network-show=false"
   (box :space-evenly false :valign "center" 
   (revealer :transition "slideleft" :reveal network-show :duration "300ms"
-  (box :halign "end"
-    (vpn)
-  )
+    (box :halign "end"
+      (vpn)
+    )
   )
   (hotspot)
 )))
