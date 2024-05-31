@@ -4,18 +4,20 @@
   border: 2px solid;
   border-radius: 6px;
 }
-.lock_button{
-  margin: 0px 5px 0px 0px;
-  background: $background;
-  border: 2px solid;
-  border-radius: 6px;
-}
-.reboot_button, .logout_button{
+.lock_button, .reboot_button, .logout_button{
   margin: 0px 5px 0px 0px;
   background: $background;
   padding: 6px 11px 6px 7px;
   border: 2px solid;
   border-radius: 6px;
+}
+
+.shutdown_button:hover, .lock_button:hover, .reboot_button:hover, .logout_button:hover {
+  background: $foreground;
+}
+
+.shutdown_button:active, .lock_button:active, .reboot_button:active, .logout_button:active {
+  background: $mauve;
 }
 
 .volume_box{
@@ -78,4 +80,12 @@
   border: 2px solid;
   border-radius: 6px;
     min-height: 5px;
+}
+
+.vpn:hover, .hotspot:hover {
+  background: $foreground;
+}
+
+.vpn:active, .hotspot:active {
+  background: $mauve;
 }
