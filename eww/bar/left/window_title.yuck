@@ -1,11 +1,11 @@
-(defpoll current_window_title :interval "0.5s" "./scripts/current_window")
+(defpoll current_window :interval "0.5s" "./scripts/current_window")
 
 (defwidget window_title []
   (revealer 
     :transition "slideright" 
-    :reveal {current_window_title != ""}
+    :reveal {current_window.title != ""}
     :duration "250ms" 
   (box 
     :class "window_title"
-  (label :text current_window_title :limit-width 60)
+  (label :text {current_window.title} :limit-width 60)
 )))
