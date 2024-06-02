@@ -3,7 +3,7 @@
 (defwidget window_title []
   (revealer 
     :transition "slideright" 
-    :reveal {current_window.title != ""}
+    :reveal {current_window != "{}"}
     :duration "250ms" 
   (box 
     :class "window_title"
