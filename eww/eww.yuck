@@ -28,9 +28,7 @@
   :focusable false
   :geometry (geometry
     :x "4%"
-    ;; :y "9%"
     :width "5%"
-    ;; :height "10%"
     :anchor "top right"
   )
 
