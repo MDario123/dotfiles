@@ -6,19 +6,21 @@
 
 *{
   color: $mauve;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
 }
 
-.bar{
-  padding: 5px;
-  background: unset;
-  // filter: blur(5px);
-  // backdrop-filter: blur(5px);
+.basic_button{
+  background: $background;
+  padding: 0px 5px;
+  border: 2px solid;
+  border-radius: 6px;
+}
+.basic_button:hover {
+  background: $foreground;
+}
+.basic_button:active {
+  background: $mauve;
 }
 
-@import "./bar/right.scss";
-@import "./bar/center.scss";
-@import "./bar/left.scss";
-
-
-
+@import "./bar/bar.scss";
+@import "./connect/connect.scss";
