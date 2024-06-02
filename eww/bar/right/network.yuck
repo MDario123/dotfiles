@@ -3,6 +3,6 @@
     :halign "end"
     :class "network" 
     ;; sleep because of a bug (https://github.com/elkowar/eww/issues/1022)
-    :onclick 'nmcli dev wifi rescan & sleep 0.1 && eww open --toggle connect'
+    :onclick 'nmcli dev wifi rescan & eww update reveal_connections=${!reveal_connections}'
     "󰤯"
 ))

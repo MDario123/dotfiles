@@ -1,7 +1,7 @@
 (defpoll connections :interval "1s" "./scripts/connection")
-(defvar network-show false)
 (defpoll hotspot-status :interval "1s" "./scripts/hotspot status")
 (defpoll vpn-status :interval "1s" "./scripts/vpn status")
+(defvar reveal_connections false)
 
 (defwidget hotspot []
   (button 
@@ -19,6 +19,10 @@
 
 
 (defwidget wifi []
+  (revealer
+    :transition "slidedown"
+    :reveal reveal_connections
+    :duration "300ms"
   (box 
     :halign "fill"
     :valign "start"
@@ -47,5 +51,6 @@
     ))
     (vpn)
     (hotspot)
+  )
   )
 )
